@@ -1,7 +1,7 @@
 import { HttpHeaders, HttpParams } from '@angular/common/http';
-import { ApiResponseTypes } from './api';
 
 export interface HttpClientOptions {
+	body?: Object;
 	headers?: HttpHeaders | {
 		[header: string]: string | string[];
 	};

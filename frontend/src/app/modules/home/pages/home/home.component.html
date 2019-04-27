@@ -1,3 +1,125 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="row">
+    <main class="col-12 py-3 py-md-5">
+      <div class="row">
+        <div class="col-12 col-md-4 order-0 order-md-last">
+          <div class="auth-buttons-container text-right">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="btn btn-primary">
+                Log In
+              </button>
+              <button class="btn btn-info">
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-8 order-0 order-md-first">
+          <div class="title-container pt-3 pt-md-0">
+            <h1>CREATURE. Projects to Learn From</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 main-questions-container">
+          <div class="row mb-3">
+            <div class="col-12 col-md-4 col-lg-3 py-md-1">
+              <label for="exampleFormControlTextarea1">
+                <h5 class="text-secondary">What you want to make?</h5>
+              </label>
+            </div>
+            <div class="form-group col-12 col-md-8 col-lg-9">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                placeholder="Write something..."></textarea>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-md-4 col-lg-3 py-md-1">
+              <label for="exampleFormControlTextarea2">
+                <h5 class="text-secondary">How far are you in the project?</h5>
+              </label>
+            </div>
+            <div class="form-group col-12 col-md-8 col-lg-9">
+              <textarea class="form-control" id="exampleFormControlTextarea2" rows="2"
+                placeholder="Write something..."></textarea>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-md-4 col-lg-3 py-md-1">
+              <label for="exampleFormControlTextarea3">
+                <h5 class="text-secondary">What do you what to learn?</h5>
+              </label>
+            </div>
+            <div class="form-group col-12 col-md-8 col-lg-9">
+              <textarea class="form-control" id="exampleFormControlTextarea3" rows="2"
+                placeholder="Write something..."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 other-questions">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <h5 class="text-secondary py-2">
+                Are you making or using?
+                <span class="text-info fs-small">(You can select more than one)</span>
+              </h5>
+              <div class="list-container">
+                <ul class="list-group">
+                  <li class="list-group-item" *ngFor="let item of checkboxList;let i = index">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" [id]="'customCheck' + (i + 1)">
+                      <label class="custom-control-label" [for]="'customCheck' + (i + 1)">
+                        {{ item }}
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <h5 class="text-secondary py-2">
+                What category would you say your project is?
+              </h5>
+              <div class="list-container">
+                <ul class="list-group">
+                  <li class="list-group-item" *ngFor="let item of radioList;let i = index">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" [id]="'customRadio' + (i + 1)"
+                        name="customRadio">
+                      <label class="custom-control-label" [for]="'customRadio' + (i + 1)">
+                        {{ item }}
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-3 mt-lg-0">
+              <h5 class="text-secondary py-2">
+                Would you like beginners or experts projects?
+              </h5>
+              <div class="list-container">
+                <ul class="list-group">
+                  <li class="list-group-item" *ngFor="let item of radioListLevel;let i = index">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" [id]="'customRadioLevel' + (i + 1)"
+                        name="customRadioLevel">
+                      <label class="custom-control-label" [for]="'customRadioLevel' + (i + 1)">
+                        {{ item }}
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 text-right">
+          <button class="btn btn-primary btn-lg btn-block">Start</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

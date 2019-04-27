@@ -1,16 +1,7 @@
-import { HttpHeaders, HttpParams } from '@angular/common/http';
-
 export type ApiResponseTypes = 'json' | 'blob' | 'text';
-
-export interface ApiOptions {
-	baseUrl?: string;
-	auth?: boolean;
-	responseType?: ApiResponseTypes;
-}
 
 export interface ApiRequestOptions {
 	baseUrl?: string;
-	auth?: boolean;
 	headers?: string | {
 		[header: string]: string | string[];
 	};
